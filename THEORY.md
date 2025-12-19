@@ -8,7 +8,7 @@ A Bayesian inference framework for modelling and updating beliefs about coin fai
 
 ### Core Idea: Composable Priors
 
-The framework implements a **composable prior hierarchy** where any prior can contain sub-priors, which can themselves be mixtures. This recursive structure is not limited to the binomial/coin-flip case—it generalizes to any likelihood function with compatible priors.
+The framework implements a **composable prior hierarchy** where any prior can contain sub-priors, which can themselves be mixtures. This recursive structure is not limited to the binomial/coin-flip case—it generalises to any likelihood function with compatible priors.
 
 ```
 CompoundPrior (mixture)
@@ -75,7 +75,7 @@ $$\ln P(D | p_0) = k \ln(p_0) + m \ln(1 - p_0)$$
 | Always heads | 1 | Any tails observed | $w \to 0$ ($\ln w = -\infty$) |
 | Fair coin | 0.5 | Never | Remains valid |
 
-**Why this is valid:** In a mixture, impossible hypotheses simply receive zero posterior weight. They don't break the inference—they get ruled out by the evidence, which is exactly what Bayesian updating should do. The mixture renormalizes over the remaining valid hypotheses.
+**Why this is valid:** In a mixture, impossible hypotheses simply receive zero posterior weight. They don't break the inference—they get ruled out by the evidence, which is exactly what Bayesian updating should do. The mixture renormalises over the remaining valid hypotheses.
 
 ---
 
