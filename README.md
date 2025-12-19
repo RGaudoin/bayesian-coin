@@ -59,4 +59,4 @@ bayesian-coin/
 
 ## Acknowledgments
 
-I worked out the formulas and iterated in notebooks, but kept them private as the project was unfinished. Cleaning it all up and building the interactive app, I iterated productively with [Claude Code](https://claude.ai/code)—partly to finish the project, partly to familiarize myself with the tool and learn how to employ AI code assistants productively.
+I worked out the formulas and iterated in notebooks, but kept them private as the project was unfinished. Cleaning it all up and building the interactive app, I iterated productively with [Claude Code](https://claude.ai/code)—partly to finish the project, partly to familiarise myself with the tool and learn how to employ AI code assistants productively.
