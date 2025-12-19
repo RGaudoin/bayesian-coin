@@ -23,7 +23,7 @@ Open http://localhost:8050 in your browser.
 
 ### Tabs
 
-**Simulation** - Interactive visualization of Bayesian updating
+**Simulation** - Interactive visualisation of Bayesian updating
 
 **Theory** - Mathematical formulas and concepts
 
@@ -97,7 +97,7 @@ Run 2-3 steps. Watch one-sided hypotheses get ruled out (weight → 0) after see
 
 ### 5. The "Lucky Streak" Story (see [Background](README.md#background))
 
-This experiment visualizes why hierarchical priors match intuition:
+This experiment visualises why hierarchical priors match intuition:
 
 **Step 1:** Reset with default weights (P(fair) = 10⁶), run 20 steps with True prob = 1.0 (all heads)
 - 20 heads is ~1 in a million (2²⁰ ≈ 10⁶)—same order as the fair prior weight!

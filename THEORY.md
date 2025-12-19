@@ -2,7 +2,7 @@
 
 ## Overview
 
-A Bayesian inference framework for modeling and updating beliefs about coin fairness. Demonstrates hierarchical Bayesian models with conjugate priors and mixture distributions.
+A Bayesian inference framework for modelling and updating beliefs about coin fairness. Demonstrates hierarchical Bayesian models with conjugate priors and mixture distributions.
 
 ## Mathematical Framework
 
@@ -42,7 +42,7 @@ $$\mathbb{E}[p] = \frac{\alpha}{\alpha + \beta}$$
 **Variance:**
 $$\text{Var}(p) = \frac{\alpha \beta}{(\alpha + \beta)^2 (\alpha + \beta + 1)}$$
 
-**Log-Normalization (Evidence/Marginal Likelihood):**
+**Log-Normalisation (Evidence/Marginal Likelihood):**
 $$\ln P(D | \text{Beta prior}) = \ln B(\alpha', \beta') - \ln B(\alpha_0, \beta_0)$$
 
 where $B(\alpha, \beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$ is the Beta function.
@@ -98,7 +98,7 @@ $$\ln w_i' = \ln P(D | M_i) + \ln w_i^{(0)} - \text{logsumexp}_j(\ln P(D | M_j) 
 
 where $\ln P(D | M_i)$ is the `lognorm` from each sub-prior.
 
-**Note:** If $P(D | M_i) = 0$ (impossible hypothesis), then $\ln P(D | M_i) = -\infty$, and after normalization $w_i' = 0$. The hypothesis is excluded from the mixture automatically.
+**Note:** If $P(D | M_i) = 0$ (impossible hypothesis), then $\ln P(D | M_i) = -\infty$, and after normalisation $w_i' = 0$. The hypothesis is excluded from the mixture automatically.
 
 #### How Different Prior Types Update
 
@@ -124,7 +124,7 @@ This decomposes into:
 - **E[Var(p|M)]**: Average within-model uncertainty
 - **Var(E[p|M])**: Between-model uncertainty
 
-#### Compound Log-Normalization (Marginal Likelihood)
+#### Compound Log-Normalisation (Marginal Likelihood)
 $$\ln P(D | \text{mixture}) = \text{logsumexp}_i(\ln P(D | M_i) + \ln w_i^{(0)})$$
 
 ---
@@ -171,18 +171,18 @@ When evidence arrives:
 ## Implementation Notes
 
 - **Log-space arithmetic** throughout for numerical stability
-- **Log-sum-exp trick** prevents overflow/underflow in weight normalization
+- **Log-sum-exp trick** prevents overflow/underflow in weight normalisation
 - **Impossible hypotheses** (`is_zero=True`) receive $\ln w = -\infty$; excluded from sums but retained in structure
 - **Reweight operation** allows "checkpointing" the posterior as a new prior
 
 ## Structure
 
 ```
-BayesianCoin/
+bayesian-coin/
 ├── src/
 │   ├── bayesian_coin.py   # Prior, BetaPrior, DeltaPrior, CompoundPrior
 │   └── utils.py           # mk_coin() factory
-├── app.py                 # Interactive Dash visualization
+├── app.py                 # Interactive Dash visualisation
 └── notebooks/
     └── Dev.ipynb          # Development notebook
 ```
