@@ -179,12 +179,11 @@ When evidence arrives:
 
 ```
 bayesian-coin/
+├── app.py                 # Interactive Dash visualisation
 ├── src/
 │   ├── bayesian_coin.py   # Prior, BetaPrior, DeltaPrior, CompoundPrior
 │   └── utils.py           # mk_coin() factory
-├── app.py                 # Interactive Dash visualisation
-└── notebooks/
-    └── Dev.ipynb          # Development notebook
+└── requirements.txt       # Dependencies
 ```
 
 ## Key Classes
