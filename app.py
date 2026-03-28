@@ -664,4 +664,4 @@ def update_plots(reset_data, run_data, log_scale, show_probs):
 if __name__ == '__main__':
     print("Starting Bayesian Coin Inference App...")
     print("Open http://localhost:8050 in your browser")
-    app.run(debug=True, host='localhost', port=8050)
+    app.run(debug=False, host='localhost', port=8050)
